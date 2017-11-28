@@ -1,0 +1,22 @@
+body {
+    padding-top: 15rem;
+    width: 100%
+}
+
+th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.div-font {
+    font-size: 3rem;
+}
+
+.copy-btn {
+    font-size: 3rem;
+}
