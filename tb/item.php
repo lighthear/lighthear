@@ -21,7 +21,7 @@
             <!-- <h1  id="copy-target"></h1> -->
         </div>
         <button id="copy-btn" class="btn btn-lg btn-danger copy-btn" data-clipboard-target="#copy-target" style="font-size: 3rem">点我复制淘口令</button>
-        <div style="font-size: 2rem"><br><br>打开「手机淘宝」即可「领取优惠券」并购买</div>
+        <div style="font-size: 2rem"><br>打开「手机淘宝」即可「领取优惠券」并购买</div>
 
         <img src="images/ly.jpg" width="300px" height="300px;">
         <div class="product-tip" style="font-size: 2rem">
