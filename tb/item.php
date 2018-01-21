@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 user-scalable=no 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。 -->
       <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>剁手薅羊毛</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -20,7 +21,7 @@
             <!-- <h1  id="copy-target"></h1> -->
         </div>
         <button id="copy-btn" class="btn btn-lg btn-danger copy-btn" data-clipboard-target="#copy-target" style="font-size: 3rem">点我复制淘口令</button>
-        <div style="font-size: 2rem">打开「手机淘宝」即可「领取优惠券」并购买<br><br></div>
+        <div style="font-size: 2rem"><br><br>打开「手机淘宝」即可「领取优惠券」并购买</div>
 
         <img src="images/ly.jpg" width="300px" height="300px;">
         <div class="product-tip" style="font-size: 2rem">
