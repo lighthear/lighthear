@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,6 @@
       <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title><?php echo $_GET['item_id'];?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/clipboard.min.js"></script>
@@ -16,25 +15,23 @@
 <div class="container">
     <div class="text-center div-font" style="max-width: 100%">
         <div>
-            <input id="copy-target" class="text-center border-0" style="color: #aaaaaa" value="">
+            <!-- <input id="copy-target" class="text-center border-0" style="color: #aaaaaa" value=""> -->
+            <label id="copy-target" style="font-size: 5rem"></label>
+            <!-- <h1  id="copy-target"></h1> -->
         </div>
-        <button id="copy-btn" class="btn btn-lg btn-danger copy-btn" data-clipboard-target="#copy-target">点我复制淘口令</button>
-        <div class="product-tip" style="font-size: 1.5rem">打开「手机淘宝」即可「领取优惠券」并购买</div>
+        <button id="copy-btn" class="btn btn-lg btn-danger copy-btn" data-clipboard-target="#copy-target" style="font-size: 3rem">点我复制淘口令</button>
+        <div style="font-size: 3rem">打开「手机淘宝」即可「领取优惠券」并购买</div>
 
-        <img src="images/ly.jpg" width="300px" height="400px;">
-        <div class="product-tip" style="font-size: 1.5rem">
+        <img src="images/ly.jpg" width="430px" height="430px;">
+        <div class="product-tip" style="font-size: 3rem">
             长按识别二维码 <br>
-            添加微信获取更多优惠券
-        </div>
-
-
-
-        <div>
+            关注微信公众号 剁手薅羊毛<br>
+            获取更多神价格商品
         </div>
     </div>
     <script>
         $(function () {
-            $('#copy-target').val("￥<?php echo $_GET['item_id'];?>￥");
+            $('#copy-target').html("￥<?php echo $_GET['item_id'];?>￥");
         });
 
         var clipboard = new Clipboard('#copy-btn');
