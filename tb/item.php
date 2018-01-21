@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title><?php echo $_GET['item_id'];?></title>
+    <title>剁手薅羊毛</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -16,7 +16,7 @@
     <div class="text-center div-font" style="max-width: 100%">
         <div>
             <!-- <input id="copy-target" class="text-center border-0" style="color: #aaaaaa" value=""> -->
-            <label id="copy-target" style="font-size: 4rem"></label>
+            <label id="copy-target" style="font-size: 3rem"></label>
             <!-- <h1  id="copy-target"></h1> -->
         </div>
         <button id="copy-btn" class="btn btn-lg btn-danger copy-btn" data-clipboard-target="#copy-target" style="font-size: 3rem">点我复制淘口令</button>
