@@ -12,7 +12,7 @@
     <script src="js/clipboard.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="text-center div-font" style="max-width: 100%">
         <div>
             <!-- <input id="copy-target" class="text-center border-0" style="color: #aaaaaa" value=""> -->
