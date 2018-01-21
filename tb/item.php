@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>剁手薅羊毛</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -20,7 +20,7 @@
             <!-- <h1  id="copy-target"></h1> -->
         </div>
         <button id="copy-btn" class="btn btn-lg btn-danger copy-btn" data-clipboard-target="#copy-target" style="font-size: 3rem">点我复制淘口令</button>
-        <div style="font-size: 2rem">打开「手机淘宝」即可「领取优惠券」并购买</div>
+        <div style="font-size: 2rem">打开「手机淘宝」即可「领取优惠券」并购买<br><br></div>
 
         <img src="images/ly.jpg" width="300px" height="300px;">
         <div class="product-tip" style="font-size: 2rem">
