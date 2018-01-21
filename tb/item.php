@@ -22,7 +22,7 @@
         <button id="copy-btn" class="btn btn-lg btn-danger copy-btn" data-clipboard-target="#copy-target" style="font-size: 3rem">点我复制淘口令</button>
         <div style="font-size: 3rem">打开「手机淘宝」即可「领取优惠券」并购买</div>
 
-        <img src="images/ly.jpg" width="430px" height="430px;">
+        <img src="images/ly.jpg" width="300px" height="300px;">
         <div class="product-tip" style="font-size: 3rem">
             长按识别二维码 <br>
             关注微信公众号 剁手薅羊毛<br>
