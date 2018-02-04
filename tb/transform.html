@@ -26,16 +26,21 @@
       </div>
 
       <div class="checkbox row">
-        <div class="col-xs-5 col-sm-2">
+        <div class="col-xs-4 col-sm-2">
           <label>
             <input id="shortUrl" name="shortUrl" type="checkbox" value="true"> 使用短链接
           </label>
         </div>
-        <div class="col-xs-7 col-sm-10">
+        <div class="col-xs-4 col-sm-2">
           <label>
             <input id="baidu" name="baidu" type="checkbox" value="true" checked="checked"> 使用百度翻译
           </label>
-        </div>   
+        </div>
+        <div class="col-xs-4 col-sm-8">
+          <label>
+            <input id="simple" name="simple" type="checkbox" value="true" checked="checked"> 精简模式
+          </label>
+        </div>
       </div>
 
       <div class="row">
@@ -59,24 +64,30 @@
               var shortStr = longStr.split('￥');
               var baidu = 0;
 
-              if($('#baidu').is(":checked")){
-              	baidu = 1;
+              if ($('#simple').is(":checked")) {
+              	$('#copy-target').val("￥" + shortStr[1] +"￥\n"
+	                              + "↑长按复制此消息打开手机淘宝\n"
+	                              + "安卓用户无法复制的话升级到最新版微信即可");
               }else {
-              	baidu = 0;
+              	if($('#baidu').is(":checked")){
+	              	baidu = 1;
+	              }else {
+	              	baidu = 0;
+	              }
+	              $.getJSON("sever.php",{item_id: shortStr[1],baidu: baidu},function (json) {
+	                  url_short = json.urls[0].url_short;
+	                  url_long = json.urls[0].url_long;
+	                  if($('#shortUrl').is(":checked")){
+	                      $('#copy-target').val("￥" + shortStr[1] +"￥\n"
+	                              + url_short + "\n"
+	                              + "↑苹果用户直接复制此消息打开手机淘宝，安卓用户点击链接复制淘口令");
+	                  }else {
+	                      $('#copy-target').val("￥" + shortStr[1] +"￥\n"
+	                              +url_long +"\n"
+	                              + "↑苹果用户直接复制此消息打开手机淘宝，安卓用户点击链接复制淘口令");
+	                  }
+	              });
               }
-              $.getJSON("sever.php",{item_id: shortStr[1],baidu: baidu},function (json) {
-                  url_short = json.urls[0].url_short;
-                  url_long = json.urls[0].url_long;
-                  if($('#shortUrl').is(":checked")){
-                      $('#copy-target').val("￥" + shortStr[1] +"￥\n"
-                              + url_short + "\n"
-                              + "↑苹果用户直接复制此消息打开手机淘宝，安卓用户点击链接复制淘口令");
-                  }else {
-                      $('#copy-target').val("￥" + shortStr[1] +"￥\n"
-                              +url_long +"\n"
-                              + "↑苹果用户直接复制此消息打开手机淘宝，安卓用户点击链接复制淘口令");
-                  }
-              });
           });
       });
   </script>
