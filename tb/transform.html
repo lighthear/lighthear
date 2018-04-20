@@ -38,7 +38,7 @@
         </div>
         <div class="col-xs-4 col-sm-8">
           <label>
-            <input id="simple" name="simple" type="checkbox" value="true" checked="checked"> 精简模式
+            <input id="simple" name="simple" type="checkbox" value="true"> 精简模式
           </label>
         </div>
       </div>
@@ -78,13 +78,11 @@
 	                  url_short = json.urls[0].url_short;
 	                  url_long = json.urls[0].url_long;
 	                  if($('#shortUrl').is(":checked")){
-	                      $('#copy-target').val("￥" + shortStr[1] +"￥\n"
-	                              + url_short + "\n"
-	                              + "↑苹果用户直接复制此消息打开手机淘宝，安卓用户点击链接复制淘口令");
+	                      $('#copy-target').val(url_short + "\n"
+	                              + "↑点击链接复制淘口令");
 	                  }else {
-	                      $('#copy-target').val("￥" + shortStr[1] +"￥\n"
-	                              +url_long +"\n"
-	                              + "↑苹果用户直接复制此消息打开手机淘宝，安卓用户点击链接复制淘口令");
+	                      $('#copy-target').val(url_long +"\n"
+	                              + "↑点击链接复制淘口令");
 	                  }
 	              });
               }
