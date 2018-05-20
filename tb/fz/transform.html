@@ -33,7 +33,7 @@
         </div>
         <div class="col-xs-7 col-sm-10">
           <label>
-            <input id="baidu" name="baidu" type="checkbox" value="true"> 使用百度翻译
+            <input id="baidu" name="baidu" type="checkbox" value="true" checked="checked"> 使用百度翻译
           </label>
         </div>   
       </div>
@@ -56,7 +56,7 @@
       $(document).ready(function() {
           $('#transform').click(function () {
               var longStr = $('#before').val();
-              var shortStr = longStr.split('￥');
+              var shortStr = longStr.split(/￥|《/);
               var baidu = 0;
               var date=new Date();
 							var second=date.getSeconds();
